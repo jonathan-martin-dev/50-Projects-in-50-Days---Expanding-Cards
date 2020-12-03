@@ -1,14 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+   
+}
+
+.title-container {
+    margin: 0 5%;
+}
+
+.title-container h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+
+.title-container p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.card-selection {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    font-size: 6rem;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.7s;
+}
+
+h3 {
+    margin: 0;
+    opacity: 0;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    }
 }
