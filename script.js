@@ -1,5 +1,10 @@
 const panels = document.querySelectorAll('.panel');
 
+//Switch Light/Dark Modes
+const switchSetting = () => {
+    const elem = document.body;
+    elem.classList.toggle('light-mode');
+}
 
 panels.forEach(panel => {
     panel.addEventListener('click', () => {
